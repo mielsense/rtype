@@ -1,0 +1,6 @@
+[book]
+authors = ["Noé Lopez"]
+language = "en"
+multilingual = false
+src = "src"
+title = "R-Type developer documentation"

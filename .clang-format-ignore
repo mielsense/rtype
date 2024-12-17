@@ -1,0 +1,5 @@
+*.json
+client/assets/animations/enemies/*.json
+client/assets/animations/missiles/*.json
+client/assets/animations/ships/*.json
+client/assets/maps/*.json

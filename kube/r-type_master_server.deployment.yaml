@@ -1,0 +1,51 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rtype-master-server
+  labels:
+    app: rtype
+    component: master-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rtype
+      component: master-server
+  template:
+    metadata:
+      labels:
+        app: rtype
+        component: master-server
+    spec:
+      containers:
+        - name: rtype-master-server
+          image: godlyjaaaaj/r-type_master_server:latest
+          imagePullPolicy: Always
+          args:
+            - "--inter-server-port"
+            - "$(MASTER_PORT)"
+          envFrom:
+            - configMapRef:
+                name: r-type-server-configmap
+          ports:
+            - containerPort: 4243
+              protocol: UDP
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: rtype-master-server-service
+  labels:
+    app: rtype
+    component: master-server
+spec:
+  type: ClusterIP
+  ports:
+    - port: 4243
+      targetPort: 4243
+      protocol: UDP
+  selector:
+    app: rtype
+    component: master-server

@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rtype-server
+  labels:
+    app: rtype
+    component: server
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      app: rtype
+      component: server
+  template:
+    metadata:
+      labels:
+        app: rtype
+        component: server
+    spec:
+      containers:
+        - name: rtype-server
+          image: godlyjaaaaj/r-type_server:latest
+          imagePullPolicy: Always
+          args:
+            - "--master-ip"
+            - "$(MASTER_IP)"
+            - "--master-port"
+            - "$(MASTER_PORT)"
+          envFrom:
+            - configMapRef:
+                name: r-type-server-configmap
+          ports:
+            - containerPort: 4244
+              protocol: UDP

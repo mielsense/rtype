@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: r-type-server-configmap
+  labels:
+    app: rtype
+    component: master-server
+data:
+  MASTER_IP: "rtype-master-server-service"
+  MASTER_PORT: "4243"

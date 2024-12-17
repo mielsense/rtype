@@ -1,0 +1,20 @@
+{
+    "frameWidth": 32,
+    "frameHeight": 16,
+    "states": [
+        {
+            "key": "IDLE",
+            "repeat": true,
+            "frames": [
+                {
+                    "frameIndex": 0,
+                    "elapsedTime": 0.1
+                },
+                {
+                    "frameIndex": 1,
+                    "elapsedTime": 0.1
+                }
+            ]
+        }
+    ]
+}

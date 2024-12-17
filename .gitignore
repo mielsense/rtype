@@ -1,0 +1,35 @@
+# IDE
+.idea
+.vscode
+
+# CMake
+cmake-build-debug
+cmake-build-wsl-vcpkg
+cmake-build-debug-wsl
+cmake-build-vcpkg
+cmake-build-release-visual-studio-1
+cmake-build-release-visual-studio
+build/
+
+vcpkg_installed/
+venv
+mathis
+imgui.ini
+server.log
+master_server.log
+test_client
+/CMakeCache.txt
+/CMakeFiles/
+/build/
+/CMakeUserPresets.json
+/Testing/
+/compile_commands.json
+/.cache/
+client.log
+client/assets/effects/Super Pixel Effects Mini Pack 1/PNG/.DS_Store
+client/assets/effects/.DS_Store
+client/assets/.DS_Store
+client/assets/effects/Super Pixel Effects Mini Pack 1/.DS_Store
+client/.DS_Store
+.DS_Store
+doxygen

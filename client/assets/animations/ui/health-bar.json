@@ -1,0 +1,56 @@
+{
+    "frameWidth": 48,
+    "frameHeight": 16,
+    "states": [
+        {
+            "key": "FULL",
+            "repeat": false,
+            "frames": [
+                {
+                    "frameIndex": 0,
+                    "elapsedTime": 0.1
+                }
+            ]
+        },
+        {
+            "key": "HIGH",
+            "repeat": false,
+            "frames": [
+                {
+                    "frameIndex": 1,
+                    "elapsedTime": 0.1
+                }
+            ]
+        },
+        {
+            "key": "HALF",
+            "repeat": false,
+            "frames": [
+                {
+                    "frameIndex": 2,
+                    "elapsedTime": 0.1
+                }
+            ]
+        },
+        {
+            "key": "LOW",
+            "repeat": false,
+            "frames": [
+                {
+                    "frameIndex": 3,
+                    "elapsedTime": 0.1
+                }
+            ]
+        },
+        {
+            "key": "EMPTY",
+            "repeat": false,
+            "frames": [
+                {
+                    "frameIndex": 4,
+                    "elapsedTime": 0.1
+                }
+            ]
+        }
+    ]
+}
